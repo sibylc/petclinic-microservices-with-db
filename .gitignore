@@ -20,3 +20,10 @@ generated/
 #VS Code
 .factorypath
 .project
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
