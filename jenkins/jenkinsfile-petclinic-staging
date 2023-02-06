@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    environment {
+    environment { 
         APP_NAME="petclinic"
         APP_REPO_NAME="clarusway-repo/petclinic-app-staging"
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
@@ -10,11 +10,7 @@ pipeline {
         // Get the project-id from Rancher UI (projects/namespaces --> petclinic-cluster-staging namespace --> Edit yaml --> copy projectId )
         RANCHER_CONTEXT="c-wrwj8:p-fcddk" 
        //First part of projectID
-<<<<<<< HEAD
-        CLUSTERID="c-5cqpc"
-=======
         CLUSTERID="c-wrwj8"
->>>>>>> feature/msp-27
         RANCHER_CREDS=credentials('rancher-petclinic-credentials')
     }
     stages {
