@@ -83,4 +83,4 @@ resource "aws_security_group" "tf-nexus-sec-gr" {
 
 output "nexus" {
   value = "http://${aws_instance.tf-nexus-server.public_ip}:8081"
-}
+} 
